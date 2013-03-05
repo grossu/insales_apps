@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: mysql
+  encoding: utf8
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+development:
+  database: insalesapps_development
+  <<: *defaults
+
+test:
+  database: insalesapps_test
+  <<: *defaults
+
+production:
+  database: insalesapps_production
+  <<: *defaults
